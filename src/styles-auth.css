@@ -1,0 +1,221 @@
+/* ========= 登录页 / 员工报销门户 —— 与财务工作台同视觉语言 =========
+ * 主色 #3157d5 · 深色 #111c33 · 圆角 11px · 卡片阴影 0 2px 8px #18223b06
+ * 字体 Inter / Noto Sans SC（继承 :root）
+ * 状态色复用财务页：--green #16a574 · --red #e44c5a · --orange #e58b29 · --purple #7658d6
+ */
+
+/* ---------- 登录页 ---------- */
+.login-page{min-height:100vh;display:grid;place-items:center;padding:32px;
+  background:radial-gradient(circle at 20% 0,#dbe5ff 0,transparent 40%),linear-gradient(160deg,#f4f6fa,#eef1f7)}
+.login-card{width:min(440px,100%);padding:34px 32px;border-radius:11px;background:#fff;
+  box-shadow:0 2px 8px #18223b06,0 24px 60px #18223b1a;border:1px solid #e7eaf0}
+.login-brand,.employee-brand{display:flex;gap:11px;align-items:center}
+.login-brand>span,.employee-brand>svg{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(145deg,#5f7df0,#3157d5);color:#fff;box-shadow:0 8px 24px #3157d555;padding:0}
+.login-brand b,.employee-brand b{display:block;font-size:18px;letter-spacing:3px;color:#111c33}
+.login-brand small,.employee-brand small{display:block;font-size:9px;letter-spacing:3px;color:#8390aa;margin-top:1px}
+.login-title{margin:30px 0 22px}
+.login-title h1{margin:0 0 6px;font-size:20px;color:#111c33}
+.login-title p,.demo-accounts p{margin:0;color:#7a8498;font-size:12px}
+.login-card form{display:grid;gap:14px}
+.login-card label,.form-grid label{display:grid;gap:7px;font-weight:600;font-size:12px;color:#44506a}
+.login-card input,.form-grid input,.form-grid select,.form-grid textarea,.invoice-row input{
+  padding:10px 12px;border:1px solid #dfe3ea;border-radius:7px;font:inherit;font-weight:400;color:#172033;
+  background:#fff;transition:border-color .15s,box-shadow .15s}
+.login-card input:focus,.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus,.invoice-row input:focus{
+  outline:0;border-color:#3157d5;box-shadow:0 0 0 3px #3157d51f}
+.login-submit{justify-content:center;margin-top:4px;height:36px;border-radius:7px;font-size:12px;font-weight:600;
+  border:1px solid #3157d5;background:#3157d5;color:#fff;box-shadow:0 3px 8px #3157d530;display:inline-flex;align-items:center;gap:7px}
+.login-submit svg{width:15px}
+.login-error{color:#e44c5a;margin:0;font-size:12px}
+.demo-accounts{margin-top:24px;padding-top:18px;border-top:1px solid #e7eaf0}
+.demo-accounts b{font-size:12px;color:#44506a}
+.demo-accounts p{font-size:11px;margin-top:4px}
+.demo-accounts button{width:100%;margin-top:9px;text-align:left;display:grid;grid-template-columns:24px 1fr;align-items:center;
+  gap:8px;padding:10px 12px;border:1px solid #dfe3ea;border-radius:7px;background:#fff;color:#44506a;font-weight:600;font-size:12px;
+  transition:border-color .15s,background .15s}
+.demo-accounts button:hover{border-color:#3157d5;background:#f5f8ff}
+.demo-accounts button svg{color:#3157d5;width:16px}
+.demo-accounts button small{grid-column:2;color:#7a8498;font-weight:400;font-size:10px;margin-top:2px}
+
+/* ---------- 员工报销门户 ---------- */
+.employee-app{min-height:100vh;background:#f5f7fa;color:#172033;font-size:13px}
+.employee-header{height:72px;padding:0 max(28px,calc((100vw - 1180px)/2));display:flex;justify-content:space-between;align-items:center;
+  background:#fff;border-bottom:1px solid #e7eaf0;position:sticky;top:0;z-index:10}
+.employee-brand b{font-size:14px}
+.employee-header>div:last-child{display:flex;gap:18px;align-items:center;color:#526174;font-size:12px}
+.employee-header>div:last-child>span{font-size:12px;color:#44506a}
+.employee-header>div:last-child>span b{color:#111c33;font-weight:600}
+.employee-header button{display:inline-flex;gap:6px;align-items:center;height:32px;padding:0 12px;border-radius:7px;
+  border:1px solid #dfe3ea;background:#fff;color:#44506a;font-size:12px;font-weight:600;transition:border-color .15s,color .15s}
+.employee-header button:hover{border-color:#e44c5a;color:#e44c5a}
+.employee-header button svg{width:14px}
+.employee-main{max-width:1180px;margin:auto;padding:27px 30px 45px}
+
+/* hero 区对齐财务页深色卡片（参考 .decision-title） */
+.employee-hero{padding:24px 28px;border-radius:11px;color:#fff;
+  background:linear-gradient(125deg,#18243e,#243653);border:1px solid #18223b0d;
+  display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px #18223b06}
+.employee-hero p{margin:0 0 4px;font-size:10px;letter-spacing:.5px;font-weight:600;color:#9ba6bb}
+.employee-hero h1{margin:0 0 6px;font-size:22px;letter-spacing:-.5px}
+.employee-hero span{opacity:.82;font-size:12px}
+.employee-hero .primary{height:36px;border-radius:7px;padding:0 14px;display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:600;border:1px solid #3157d5;background:#3157d5;color:#fff;box-shadow:0 3px 8px #3157d530}
+.employee-hero .primary svg{width:15px}
+
+/* tabs 对齐财务页 .detail-tabs 风格 */
+.employee-tabs{display:flex;gap:6px;margin:20px 0 16px;border-bottom:1px solid #e7eaf0}
+.employee-tabs button{padding:10px 14px;border:0;background:none;color:#7a8498;font-size:12px;font-weight:600;
+  border-bottom:2px solid transparent;margin-bottom:-1px;display:inline-flex;align-items:center;gap:6px}
+.employee-tabs button:hover{color:#3157d5}
+.employee-tabs .active{color:#3157d5;border-color:#3157d5}
+
+/* 状态筛选 tabs（新增） */
+.filter-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.filter-tabs button{height:28px;padding:0 12px;border-radius:99px;border:1px solid #dfe3ea;background:#fff;
+  color:#526174;font-size:11px;font-weight:600;display:inline-flex;align-items:center;gap:6px;transition:.15s}
+.filter-tabs button:hover{border-color:#3157d5;color:#3157d5}
+.filter-tabs .active{background:#3157d5;border-color:#3157d5;color:#fff}
+.filter-tabs .badge{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;border-radius:9px;
+  background:#eef2ff;color:#3157d5;font-size:10px;font-weight:700}
+.filter-tabs .active .badge{background:#ffffff33;color:#fff}
+
+/* 统计卡对齐 .stat-card / .panel */
+.employee-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:17px}
+.employee-stats>div,.employee-list article,.claim-form{background:#fff;border:1px solid #e7eaf0;border-radius:11px;
+  box-shadow:0 2px 8px #18223b06;padding:18px 20px}
+.employee-stats>div{display:flex;flex-direction:column;gap:5px}
+.employee-stats span{color:#7a8498;font-size:10px;font-weight:600;letter-spacing:.3px}
+.employee-stats b{font-size:23px;color:#111c33;letter-spacing:-.5px}
+.employee-stats>div.draft b{color:#3157d5}
+.employee-stats>div.reviewing b{color:#e58b29}
+.employee-stats>div.supplement b{color:#e44c5a}
+.employee-stats>div.paid b{color:#16a574}
+
+/* 列表卡 */
+.employee-list{display:grid;gap:12px}
+.claim-title{display:flex;align-items:center;gap:11px}
+.claim-title>svg{width:18px;color:#3157d5;flex-shrink:0}
+.claim-title>div{flex:1;min-width:0}
+.claim-title b{display:block;font-size:14px;color:#111c33;font-weight:600}
+.claim-title small{display:block;margin-top:3px;color:#7a8498;font-size:11px}
+.claim-title strong{margin-left:auto;font-size:15px;color:#111c33;font-weight:700;letter-spacing:-.3px}
+.claim-meta,.claim-actions{display:flex;gap:10px;align-items:center;margin:13px 0 6px;font-size:11px;color:#637286;flex-wrap:wrap}
+.claim-meta>span:not(.employee-status){padding-left:10px;border-left:1px solid #e7eaf0}
+.claim-meta>span:not(.employee-status):first-child{padding-left:0;border-left:0}
+
+/* 状态标签复用 .tag 样式，按 workflowStatus 着色 */
+.employee-status{padding:3px 9px;border-radius:7px;background:#eef2ff;color:#3157d5;font-size:11px;font-weight:600;
+  display:inline-flex;align-items:center;gap:5px;letter-spacing:.2px}
+.employee-status::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.7}
+.tag-DRAFT{background:#eef2ff;color:#3157d5}
+.tag-SUBMITTED,.tag-OCR_PROCESSING,.tag-VERIFYING,.tag-AUDITING,.tag-WAITING_MANUAL_REVIEW{background:#fff7e6;color:#a56605}
+.tag-WAITING_SUPPLEMENT,.tag-WAITING_FIELD_CONFIRMATION{background:#fff3e6;color:#e58b29}
+.tag-SUSPENDED{background:#f1edff;color:#7658d6}
+.tag-APPROVED,.tag-PAYMENT_PENDING{background:#e6f4ff;color:#1f6fd0}
+.tag-PAID{background:#e7f8ef;color:#17844b}
+.tag-REJECTED,.tag-PAYMENT_FAILED{background:#fff0f1;color:#c24150}
+.tag-CANCELLED{background:#eef1f5;color:#7a8498}
+
+/* 处理建议条（新增） */
+.advice{margin:10px 0 0;padding:10px 12px;border-radius:7px;background:#f5f8ff;border:1px solid #e7eaf0;
+  color:#44506a;font-size:12px;line-height:1.55;display:flex;gap:8px;align-items:flex-start}
+.advice svg{width:14px;color:#3157d5;flex-shrink:0;margin-top:2px}
+.advice.warn{background:#fff7e6;border-color:#ffe2b3;color:#8a5208}
+.advice.warn svg{color:#e58b29}
+.advice.danger{background:#fff0f1;border-color:#ffd6da;color:#a32f3c}
+.advice.danger svg{color:#e44c5a}
+.advice.success{background:#e7f8ef;border-color:#bff0d1;color:#0f7a45}
+.advice.success svg{color:#16a574}
+
+/* 补充材料明细（新增） */
+.supplement-box{margin:10px 0 0;padding:12px 14px;border-radius:7px;background:#fff7e6;border:1px solid #ffe2b3}
+.supplement-box h4{margin:0 0 6px;font-size:12px;color:#8a5208;display:flex;align-items:center;gap:6px}
+.supplement-box h4 svg{width:14px}
+.supplement-box ul{margin:6px 0 0;padding-left:18px;color:#6b4a16;font-size:12px;line-height:1.7}
+.supplement-box .due{margin-top:8px;font-size:11px;color:#a56605;font-weight:600}
+
+/* 命中规则展开区（新增） */
+.detail-expand{margin-top:10px;padding:12px;border-radius:7px;background:#f5f7fa;border:1px dashed #dfe3ea}
+.detail-expand h5{margin:0 0 8px;font-size:11px;color:#44506a;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.detail-expand .rule-row{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid #eef1f5;font-size:11px}
+.detail-expand .rule-row:last-child{border-bottom:0}
+.detail-expand .rule-row span{color:#637286}
+.detail-expand .rule-row b{color:#111c33;font-weight:600}
+
+.employee-list p{margin:10px 0 0;color:#46566c;font-size:12px;line-height:1.55}
+.claim-actions{margin-top:8px}
+.claim-actions button{height:28px;border-radius:7px;padding:0 11px;border:1px solid #dfe3ea;background:#fff;color:#44506a;
+  font-size:11px;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:.15s}
+.claim-actions button:hover{border-color:#3157d5;color:#3157d5}
+.claim-actions button svg{width:13px}
+.claim-actions .primary{border-color:#3157d5;background:#3157d5;color:#fff;box-shadow:0 3px 8px #3157d530}
+.claim-actions .primary:hover{background:#2848bd;color:#fff}
+.claim-actions .danger-link{color:#c24150;border-color:#ffd6da}
+.claim-actions .danger-link:hover{background:#fff0f1;color:#a32f3c;border-color:#e44c5a}
+
+.employee-empty{text-align:center;padding:60px 20px;background:#fff;border:1px solid #e7eaf0;border-radius:11px;
+  box-shadow:0 2px 8px #18223b06;display:grid;justify-items:center;gap:10px;color:#65758a}
+.employee-empty svg{width:30px;height:30px;color:#9ba6bb}
+.employee-empty b{font-size:14px;color:#44506a}
+.employee-empty span{font-size:12px}
+.employee-empty .primary{margin-top:8px;height:32px;border-radius:7px;padding:0 14px;border:1px solid #3157d5;background:#3157d5;
+  color:#fff;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:6px;box-shadow:0 3px 8px #3157d530}
+.employee-empty .primary svg{width:14px}
+
+/* 表单 */
+.claim-form{padding:22px 24px}
+.form-title,.invoice-form-head,.form-actions{display:flex;justify-content:space-between;align-items:center}
+.form-title h2,.invoice-form-head h3{margin:0;font-size:14px;color:#111c33}
+.form-title p,.invoice-form-head p{margin:3px 0 0;color:#7a8498;font-size:11px}
+.form-title b{font-size:14px;color:#3157d5;font-weight:700}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.form-grid .wide{grid-column:1/-1}
+.form-grid textarea{min-height:72px;resize:vertical}
+
+/* 预算提示（新增） */
+.budget-hint{grid-column:1/-1;margin-top:-6px;padding:8px 12px;border-radius:7px;background:#eef2ff;border:1px solid #d6e0ff;
+  color:#3157d5;font-size:11px;display:flex;align-items:center;gap:6px}
+.budget-hint svg{width:13px;flex-shrink:0}
+.budget-hint.warn{background:#fff0f1;border-color:#ffd6da;color:#c24150}
+.budget-hint.warn svg{color:#e44c5a}
+
+.invoice-form-head{margin-top:18px}
+.invoice-row{display:grid;grid-template-columns:2fr 1.3fr 110px 34px;gap:9px;margin:10px 0;align-items:center}
+.file-field{position:relative;display:flex;align-items:center;gap:7px;padding:0 11px;height:34px;
+  border:1px dashed #aebed0;border-radius:7px;color:#64748b;overflow:hidden;font-size:11px}
+.file-field:hover{border-color:#3157d5;color:#3157d5}
+.file-field input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.file-field svg{width:14px;flex-shrink:0}
+.invoice-row button,.invoice-form-head button,.form-actions button,.add-invoice-empty{
+  display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 11px;border-radius:7px;
+  border:1px solid #dfe3ea;background:#fff;color:#44506a;font-size:11px;font-weight:600;transition:.15s}
+.invoice-row button{width:34px;justify-content:center;padding:0;color:#7a8498}
+.invoice-row button:hover{border-color:#e44c5a;color:#e44c5a;background:#fff0f1}
+.invoice-form-head button:hover,.form-actions button:not(.primary):hover{border-color:#3157d5;color:#3157d5}
+.invoice-form-head button svg,.form-actions button svg{width:13px}
+.invoice-row button svg{width:14px}
+.add-invoice-empty{width:100%;justify-content:center;border-style:dashed;height:36px;color:#3157d5;border-color:#d6e0ff;background:#f5f8ff}
+.add-invoice-empty:hover{background:#eef2ff;border-color:#3157d5}
+.ocr-result{grid-column:1/-1;margin-top:-4px;padding:6px 10px;border-radius:6px;background:#eef2ff;color:#3157d5;font-size:10px}
+.ocr-result.warn{background:#fff7e6;color:#8a5208}
+.ocr-result.error{background:#fff0f1;color:#c24150}
+
+.form-actions{margin-top:22px;justify-content:flex-end;gap:9px}
+.form-actions .primary{border:1px solid #3157d5;background:#3157d5;color:#fff;box-shadow:0 3px 8px #3157d530}
+.form-actions .primary:hover{background:#2848bd}
+.form-actions .primary:disabled,.form-actions button:disabled{opacity:.5;cursor:not-allowed;box-shadow:none}
+
+@media(max-width:780px){
+  .employee-header{padding:0 16px}
+  .employee-header>div:last-child>span{display:none}
+  .employee-main{padding:20px 14px}
+  .employee-hero{padding:18px;align-items:flex-start;gap:14px;flex-direction:column}
+  .employee-stats{grid-template-columns:repeat(2,1fr)}
+  .form-grid{grid-template-columns:1fr}
+  .form-grid .wide{grid-column:auto}
+  .invoice-row{grid-template-columns:1fr 1fr 34px}
+  .file-field{grid-column:1/-1}
+  .invoice-row input:nth-child(2){grid-column:1}
+  .form-title{align-items:flex-start;gap:10px;flex-direction:column}
+}
